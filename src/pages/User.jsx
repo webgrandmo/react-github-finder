@@ -14,6 +14,7 @@ const User = () => {
   useEffect(() => {
     getUser(params.login);
     getRepos(params.login);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const {
@@ -94,7 +95,7 @@ const User = () => {
             <div className="stat">
               <div className="stat-title text-md">Website</div>
               <div className="text-lg stat-value">
-                <a href={blog} target="_blank" rel="noreferrer">
+                <a href={`https://${blog}`} target="_blank" rel="noreferrer">
                   {blog}
                 </a>
               </div>
